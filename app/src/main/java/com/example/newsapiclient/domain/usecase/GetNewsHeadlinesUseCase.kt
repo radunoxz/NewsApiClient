@@ -7,5 +7,6 @@ import com.example.newsapiclient.domain.repository.NewsRepository
 class GetNewsHeadlinesUseCase(
     private val newsRepository: NewsRepository
 ) {
-    suspend fun getNewsHeadlines(): Resource<ApiResponse> = newsRepository.getNewsHeadlines()
+    suspend fun getNewsHeadlines(country: String, page: Int): Resource<ApiResponse> =
+        newsRepository.getNewsHeadlines(country, page)
 }
