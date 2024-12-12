@@ -4,18 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NewsFragment">
+    tools:context=".presentation.news.NewsFragment">
+
+    <SearchView
+        android:id="@+id/searchViewNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_background" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"/>
+        android:padding="5dp" />
 
 </LinearLayout>

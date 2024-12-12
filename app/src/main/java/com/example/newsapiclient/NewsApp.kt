@@ -1,4 +1,4 @@
-package com.example.newsapiclient.presentation
+package com.example.newsapiclient
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

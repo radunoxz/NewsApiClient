@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp") // Use KSP instead of kapt
     id("dagger.hilt.android.plugin") // Apply Hilt plugin
+    alias(libs.plugins.androidx.navigation.safe.args)
 }
 
 android {
@@ -69,8 +70,8 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     // Jetpack Navigation
-    implementation(libs.androidx.navigation.fragment)
-    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // Glide
     implementation libs.glide

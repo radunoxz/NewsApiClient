@@ -1,4 +1,4 @@
-package com.example.newsapiclient
+package com.example.newsapiclient.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.newsapiclient.databinding.ActivityMainBinding
-import com.example.newsapiclient.presentation.viewmodel.NewsViewModel
-import com.example.newsapiclient.presentation.viewmodel.NewsViewModelFactory
+import com.example.newsapiclient.presentation.news.NewsViewModel
+import com.example.newsapiclient.presentation.news.NewsViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

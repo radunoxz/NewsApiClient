@@ -1,7 +1,8 @@
 package com.example.newsapiclient.presentation.di
 
 import com.example.newsapiclient.domain.usecase.GetNewsHeadlinesUseCase
-import com.example.newsapiclient.presentation.viewmodel.NewsViewModelFactory
+import com.example.newsapiclient.domain.usecase.GetSearchedNewsUseCase
+import com.example.newsapiclient.presentation.news.NewsViewModelFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +15,7 @@ class FactoryModule {
     @Provides
     @Singleton
     fun provideNewsViewModelFactory(
-        getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase
-    ): NewsViewModelFactory = NewsViewModelFactory(getNewsHeadlinesUseCase)
+        getNewsHeadlinesUseCase: GetNewsHeadlinesUseCase,
+        getSearchedNewsUseCase: GetSearchedNewsUseCase
+    ): NewsViewModelFactory = NewsViewModelFactory(getNewsHeadlinesUseCase, getSearchedNewsUseCase)
 }
